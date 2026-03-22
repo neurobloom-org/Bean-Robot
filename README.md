@@ -11,7 +11,7 @@ This repository contains the complete hardware firmware and local cloud-bridge s
 * **Emergency SOS Protocol:** A long-press trigger utilizes the ESP32's native Wi-Fi stack to dispatch silent GPS/Location alerts via the CallMeBot (WhatsApp) API.
 * **Haptic Feedback:** A coin-cell vibration motor provides tactile confirmation for UI navigation and pacing for anxiety-grounding breathing exercises.
 
-## 🧰 Hardware Stack & Pinout
+## 🧰 Hardware Stack & Pinout Structure
 
 Bean is built on the **Arduino Nano ESP32**. Due to the strict memory mapping of the ESP32-S3 chip, pins have been carefully assigned to prevent internal PSRAM/Flash collisions.
 
@@ -52,4 +52,4 @@ Bean is built on the **Arduino Nano ESP32**. Due to the strict memory mapping of
 5. Compile and upload. Open the Serial Monitor at `115200` baud to view the boot diagnostic logs.
 
 ## 🧠 Development Notes
-A major milestone in this project was bypassing the default Arduino IDE pin-translation layers, which were causing instant Watchdog Timer resets when initializing the audio peripherals. The final firmware utilizes raw ESP32-S3 GPIO integers to guarantee absolute hardware stability.
+A major milestone in this project was bypassing the default Arduino IDE pin-translation layers, which were causing instant Watchdog Timer resets when initializing the audio peripherals. The final firmware utilizes raw ESP32-S3 GPIO integers to guarantee absolute hardware stability. :)

@@ -7,7 +7,7 @@ This repository contains the complete hardware firmware and local cloud-bridge s
 * **Real-Time AI Voice Assistant:** Records user audio via an I2S microphone, processes it through a local Python Flask server bridging to **Google Gemini Flash**, and streams natural voice responses back via Edge-TTS.
 * **Hardware-Isolated Audio Architecture:** To prevent Watchdog crashes (TG1WDT_SYS_RST) and memory collisions, the input (INMP441) and output (MAX98357A) peripherals are explicitly isolated onto separate I2S hardware channels (Channel 1 and Channel 0).
 * **Dynamic Emotion Engine:** An MPU-6050 gyroscope continuously monitors device handling. Bean's digital eyes (rendered on a 1.8" TFT LCD) organically shift between emotions (Happy, Scared, Confused, Sleepy) based on physical stimuli.
-* **BLE Provisioning & Security:** Uses Bluetooth Low Energy (BLE) with a 4-digit PIN verification system to securely transfer and connect to local Wi-Fi networks without hardcoding credentials into the deployment build.
+* **BLE Provisioning & Security:** Uses Bluetooth Low Energy (BLE) with a 4-digit PIN verification system to securely transfer and connect to local Wi-Fi networks without hardcoding credentials into the deployment build. (The ble server is vital to the application as that is the core method for connecting the hardware part with the firmware and software)
 * **Emergency SOS Protocol:** A long-press trigger utilizes the ESP32's native Wi-Fi stack to dispatch silent GPS/Location alerts via the CallMeBot (WhatsApp) API.
 * **Haptic Feedback:** A coin-cell vibration motor provides tactile confirmation for UI navigation and pacing for anxiety-grounding breathing exercises.
 

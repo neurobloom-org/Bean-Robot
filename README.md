@@ -52,4 +52,4 @@ Bean is built on the **Arduino Nano ESP32**. Due to the strict memory mapping of
 5. Compile and upload. Open the Serial Monitor at `115200` baud to view the boot diagnostic logs.
 
 ## 🧠 Development Notes
-A major milestone in this project was bypassing the default Arduino IDE pin-translation layers, which were causing instant Watchdog Timer resets when initializing the audio peripherals. The final firmware utilizes raw ESP32-S3 GPIO integers to guarantee absolute hardware stability. :)
+A major milestone in this project was bypassing the default Arduino IDE pin-translation layers, which were causing instant Watchdog Timer resets when initializing the audio peripherals. The final firmware utilizes raw ESP32-S3 GPIO integers to guarantee absolute hardware stability.
